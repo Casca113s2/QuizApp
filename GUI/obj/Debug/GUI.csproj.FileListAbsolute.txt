@@ -7,3 +7,4 @@ C:\Users\Casca\Desktop\.NETProject\QuizApp\GUI\obj\Debug\GUI.csproj.GenerateReso
 C:\Users\Casca\Desktop\.NETProject\QuizApp\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\Casca\Desktop\.NETProject\QuizApp\GUI\obj\Debug\GUI.exe
 C:\Users\Casca\Desktop\.NETProject\QuizApp\GUI\obj\Debug\GUI.pdb
+C:\Users\Casca\Desktop\.NETProject\QuizApp\GUI\obj\Debug\GUI.frmRegister.resources
