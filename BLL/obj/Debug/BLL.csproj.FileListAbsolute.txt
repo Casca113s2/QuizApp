@@ -1,4 +1,0 @@
-C:\Users\Casca\Desktop\.NETProject\QuizApp\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
-C:\Users\Casca\Desktop\.NETProject\QuizApp\BLL\obj\Debug\BLL.Properties.Resources.resources
-C:\Users\Casca\Desktop\.NETProject\QuizApp\BLL\obj\Debug\BLL.csproj.GenerateResource.cache
-C:\Users\Casca\Desktop\.NETProject\QuizApp\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
