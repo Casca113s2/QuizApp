@@ -151,7 +151,7 @@ namespace QuizApp.BLL
 
         public void closeTeacherNewForm()
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to close this form?", "Close Add New Question Set", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Are you sure you want to close this form?", "Close Add New Question Set Form", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (result == DialogResult.Yes)
                 frmTeacherNew.Close();

@@ -40,6 +40,7 @@ namespace QuizApp.GUI
             this.label = new System.Windows.Forms.Label();
             this.labelTestCode = new System.Windows.Forms.Label();
             this.panelCreateQuestion = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@ namespace QuizApp.GUI
             this.richTextBoxQuestion = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panelCreateQuestion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuestions)).BeginInit();
@@ -194,12 +194,23 @@ namespace QuizApp.GUI
             this.panelCreateQuestion.TabIndex = 45;
             this.panelCreateQuestion.Visible = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(515, 352);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(117, 13);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "Current Question Id";
+            // 
             // textBoxId
             // 
-            this.textBoxId.Location = new System.Drawing.Point(652, 349);
+            this.textBoxId.Location = new System.Drawing.Point(637, 349);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.ReadOnly = true;
-            this.textBoxId.Size = new System.Drawing.Size(117, 20);
+            this.textBoxId.Size = new System.Drawing.Size(132, 20);
             this.textBoxId.TabIndex = 44;
             // 
             // buttonReset
@@ -406,16 +417,6 @@ namespace QuizApp.GUI
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 26;
             this.label1.Text = "Question";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(549, 352);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 13);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "Current Question Id";
             // 
             // frmTeacherNew
             // 
