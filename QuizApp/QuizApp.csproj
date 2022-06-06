@@ -65,10 +65,12 @@
     <Compile Include="BLL\LoginBLL.cs" />
     <Compile Include="BLL\RegisterBLL.cs" />
     <Compile Include="BLL\TeacherHomeBLL.cs" />
+    <Compile Include="BLL\TeacherNewBLL.cs" />
     <Compile Include="BLL\ThemeColor.cs" />
     <Compile Include="DAL\LoginDAL.cs" />
     <Compile Include="DAL\QueryClass.cs" />
     <Compile Include="DAL\RegisterDAL.cs" />
+    <Compile Include="DAL\TeacherNewDAL.cs" />
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>

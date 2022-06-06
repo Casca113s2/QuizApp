@@ -27,37 +27,11 @@ namespace QuizApp.DAL
             return dataGridTable;
         }
 
-        //public void executeNonQuery(string sql, string successMessage, string failMessage)
-        //{
-        //    SqlCommand command = new SqlCommand(sql, connection);
-        //    connection.Open();
-
-        //    try
-        //    {
-        //        int result = command.ExecuteNonQuery();
-
-        //        if (result >= 1)
-        //        {
-        //            MessageBox.Show(successMessage, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        }
-        //        else MessageBox.Show(failMessage, "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        Console.WriteLine(e);
-        //        MessageBox.Show("SQL Query Problem!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
-        //    connection.Close();
-        //}
-
-        public void executeNonQuery(SqlCommand command, string successMessage, string failMessage)
+        public bool executeNonQuery(SqlCommand command, string successMessage, string failMessage)
         {
             command.Connection = connection;
             connection.Open();
+            bool queryResult = false;
 
             try
             {
@@ -66,19 +40,22 @@ namespace QuizApp.DAL
                 if (result >= 1)
                 {
                     MessageBox.Show(successMessage, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    queryResult = true;
                 }
                 else MessageBox.Show(failMessage, "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                MessageBox.Show("SQL Query Problem!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(failMessage, "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("SQL Query Problem!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 connection.Close();
             }
             connection.Close();
+            return queryResult;
         }
 
         public int executeScalar(SqlCommand command)

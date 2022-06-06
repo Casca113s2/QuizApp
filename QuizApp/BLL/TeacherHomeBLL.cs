@@ -131,7 +131,7 @@ namespace QuizApp.BLL
 
         public void closeTeacherHomeFrom(FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to close register form?", "Close Register", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Are you sure you want to close application?", "Close Application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (result == DialogResult.No)
                 e.Cancel = true;
