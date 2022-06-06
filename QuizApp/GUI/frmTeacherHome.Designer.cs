@@ -36,11 +36,12 @@ namespace QuizApp.GUI
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.labelLogo = new System.Windows.Forms.Label();
+            this.buttonManage = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.labelLogo = new System.Windows.Forms.Label();
             this.panelTitleBar.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -79,6 +80,7 @@ namespace QuizApp.GUI
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.buttonManage);
             this.panelMenu.Controls.Add(this.buttonEdit);
             this.panelMenu.Controls.Add(this.buttonNew);
             this.panelMenu.Controls.Add(this.buttonExit);
@@ -89,26 +91,25 @@ namespace QuizApp.GUI
             this.panelMenu.Size = new System.Drawing.Size(220, 761);
             this.panelMenu.TabIndex = 5;
             // 
-            // panelLogo
+            // buttonManage
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Controls.Add(this.labelLogo);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 80);
-            this.panelLogo.TabIndex = 1;
-            // 
-            // labelLogo
-            // 
-            this.labelLogo.AutoSize = true;
-            this.labelLogo.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogo.ForeColor = System.Drawing.Color.White;
-            this.labelLogo.Location = new System.Drawing.Point(12, 19);
-            this.labelLogo.Name = "labelLogo";
-            this.labelLogo.Size = new System.Drawing.Size(184, 42);
-            this.labelLogo.TabIndex = 0;
-            this.labelLogo.Text = "QUIZAPP";
+            this.buttonManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonManage.FlatAppearance.BorderSize = 0;
+            this.buttonManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonManage.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonManage.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonManage.Image = global::QuizApp.Properties.Resources.manual;
+            this.buttonManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonManage.Location = new System.Drawing.Point(0, 200);
+            this.buttonManage.Name = "buttonManage";
+            this.buttonManage.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.buttonManage.Size = new System.Drawing.Size(220, 60);
+            this.buttonManage.TabIndex = 6;
+            this.buttonManage.Text = "  Manage";
+            this.buttonManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonManage.UseVisualStyleBackColor = true;
+            this.buttonManage.Click += new System.EventHandler(this.buttonManage_Click);
             // 
             // buttonEdit
             // 
@@ -124,7 +125,7 @@ namespace QuizApp.GUI
             this.buttonEdit.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.buttonEdit.Size = new System.Drawing.Size(220, 60);
             this.buttonEdit.TabIndex = 5;
-            this.buttonEdit.Text = "   Edit";
+            this.buttonEdit.Text = "    Edit Test Set";
             this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -144,7 +145,7 @@ namespace QuizApp.GUI
             this.buttonNew.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.buttonNew.Size = new System.Drawing.Size(220, 60);
             this.buttonNew.TabIndex = 4;
-            this.buttonNew.Text = "    New";
+            this.buttonNew.Text = "     New Test Set";
             this.buttonNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNew.UseVisualStyleBackColor = true;
@@ -169,6 +170,27 @@ namespace QuizApp.GUI
             this.buttonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.Controls.Add(this.labelLogo);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.TabIndex = 1;
+            // 
+            // labelLogo
+            // 
+            this.labelLogo.AutoSize = true;
+            this.labelLogo.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogo.ForeColor = System.Drawing.Color.White;
+            this.labelLogo.Location = new System.Drawing.Point(12, 19);
+            this.labelLogo.Name = "labelLogo";
+            this.labelLogo.Size = new System.Drawing.Size(184, 42);
+            this.labelLogo.TabIndex = 0;
+            this.labelLogo.Text = "QUIZAPP";
             // 
             // frmTeacherHome
             // 
@@ -204,6 +226,7 @@ namespace QuizApp.GUI
         private System.Windows.Forms.Label labelLogo;
         private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.Button buttonEdit;
+        private Button buttonManage;
 
         public Panel PanelTitleBar { get => panelTitleBar; set => panelTitleBar = value; }
         public Label LabelTitle { get => labelTitle; set => labelTitle = value; }

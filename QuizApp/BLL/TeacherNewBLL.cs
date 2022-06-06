@@ -20,9 +20,11 @@ namespace QuizApp.BLL
 
         public bool checkEmptyFieldTestSet()
         {
-            if(string.IsNullOrEmpty(frmTeacherNew.TextBoxTestCode.Text) || string.IsNullOrEmpty(frmTeacherNew.TextBoxTestName.Text) )
+            if(string.IsNullOrEmpty(frmTeacherNew.TextBoxTestCode.Text) 
+                || string.IsNullOrEmpty(frmTeacherNew.TextBoxTestName.Text) 
+                || string.IsNullOrEmpty(frmTeacherNew.TextBoxTestSetTime.Text) )
             {
-                string message = "Test code or test name is empty.";
+                string message = "Test set code, test set name or test set time is empty.";
 
                 MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
@@ -35,14 +37,27 @@ namespace QuizApp.BLL
            frmTeacherNew.DataGridViewQuestions.DataSource = teacherNewDAL.loadQuestionData(frmTeacherNew.TextBoxTestCode.Text);
         }
 
+        public void timeTextBoxKeyPress(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) 
+                && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         public void createTestSet()
         {
             if(!checkEmptyFieldTestSet())
             {
-                if(teacherNewDAL.createTestSet(frmTeacherNew.TextBoxTestCode.Text, frmTeacherNew.TextBoxTestName.Text, frmTeacherNew.UserId))
+                if(teacherNewDAL.createTestSet(frmTeacherNew.TextBoxTestCode.Text, 
+                    frmTeacherNew.TextBoxTestName.Text, 
+                    frmTeacherNew.UserId, 
+                    frmTeacherNew.TextBoxTestSetTime.Text))
                 {
                     frmTeacherNew.TextBoxTestCode.ReadOnly = true;
                     frmTeacherNew.TextBoxTestName.ReadOnly = true;
+                    frmTeacherNew.TextBoxTestSetTime.ReadOnly = true;
                     frmTeacherNew.ButtonCreateTest.Enabled = false;
 
                     frmTeacherNew.PanelCreateQuestion.Visible = true;
@@ -132,7 +147,7 @@ namespace QuizApp.BLL
 
         public void updateQuestion()
         {
-            if (!checkEmptyFieldId() || !checkEmptyFieldQuestion())
+            if (!checkEmptyFieldId() && !checkEmptyFieldQuestion())
             {
                 if (teacherNewDAL.updateQuestion(
                     frmTeacherNew.TextBoxId.Text,
@@ -151,10 +166,28 @@ namespace QuizApp.BLL
 
         public void closeTeacherNewForm()
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to close this form?", "Close Add New Question Set Form", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (frmTeacherNew.PanelCreateQuestion.Visible == true)
+            {
+                resetField();
 
-            if (result == DialogResult.Yes)
-                frmTeacherNew.Close();
+                frmTeacherNew.TextBoxTestCode.Text = "";
+                frmTeacherNew.TextBoxTestName.Text = "";
+                frmTeacherNew.TextBoxTestSetTime.Text = "";
+
+                frmTeacherNew.TextBoxTestCode.ReadOnly = false;
+                frmTeacherNew.TextBoxTestName.ReadOnly = false;
+                frmTeacherNew.TextBoxTestSetTime.ReadOnly = false;
+                frmTeacherNew.PanelCreateQuestion.Visible = false;
+
+                frmTeacherNew.ButtonCreateTest.Enabled = true;
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to close this form?", "Close Add New Question Set Form", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                    frmTeacherNew.Close();
+            }
         }
     }
 }

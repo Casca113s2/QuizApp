@@ -100,7 +100,7 @@ namespace QuizApp.BLL
                 || string.IsNullOrEmpty(frmTeacherEdit.RichTextBoxAnswerD.Text)
                 || string.IsNullOrEmpty(frmTeacherEdit.ComboBoxRightAnswer.Text))
             {
-                string message = "You can not leave an empty field when create a question.";
+                string message = "You can not leave an empty field when create or update a question.";
 
                 MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
@@ -159,7 +159,7 @@ namespace QuizApp.BLL
 
         public void updateQuestion()
         {
-            if (!checkEmptyFieldId() || !checkEmptyFieldQuestion())
+            if (!checkEmptyFieldId() && !checkEmptyFieldQuestion())
             {
                 if (teacherEditDAL.updateQuestion(
                     frmTeacherEdit.TextBoxId.Text,
@@ -178,10 +178,22 @@ namespace QuizApp.BLL
 
         public void closeTeacherEditForm()
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to close this form?", "Close Edit Question Set Form", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(frmTeacherEdit.PanelCreateQuestion.Visible == true)
+            {
+                resetField();
+                frmTeacherEdit.PanelCreateQuestion.Visible = false;
+                frmTeacherEdit.TextBoxTestCode.Text = "";
+                frmTeacherEdit.TextBoxTestCode.ReadOnly = false;
 
-            if (result == DialogResult.Yes)
-                frmTeacherEdit.Close();
+                frmTeacherEdit.ButtonLoadTestSet.Enabled = true;
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to close this form?", "Close Edit Question Set Form", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                    frmTeacherEdit.Close();
+            }
         }
     }
 }

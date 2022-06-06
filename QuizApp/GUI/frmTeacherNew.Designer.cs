@@ -32,6 +32,8 @@ namespace QuizApp.GUI
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxTestSetTime = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.buttonCreateTest = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.textBoxTestName = new System.Windows.Forms.TextBox();
@@ -69,6 +71,8 @@ namespace QuizApp.GUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.textBoxTestSetTime);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.buttonCreateTest);
             this.panel2.Controls.Add(this.buttonBack);
             this.panel2.Controls.Add(this.textBoxTestName);
@@ -82,6 +86,26 @@ namespace QuizApp.GUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(810, 142);
             this.panel2.TabIndex = 44;
+            // 
+            // textBoxTestSetTime
+            // 
+            this.textBoxTestSetTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTestSetTime.Location = new System.Drawing.Point(190, 87);
+            this.textBoxTestSetTime.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTestSetTime.Name = "textBoxTestSetTime";
+            this.textBoxTestSetTime.Size = new System.Drawing.Size(194, 20);
+            this.textBoxTestSetTime.TabIndex = 27;
+            this.textBoxTestSetTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTestSetTime_KeyPress);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(114, 90);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 13);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Test set time";
             // 
             // buttonCreateTest
             // 
@@ -470,6 +494,8 @@ namespace QuizApp.GUI
         private Button buttonReset;
         private TextBox textBoxId;
         private Label label9;
+        private TextBox textBoxTestSetTime;
+        private Label label10;
 
         public TextBox TextBoxTestName { get => textBoxTestName; set => textBoxTestName = value; }
         public TextBox TextBoxTestCode { get => textBoxTestCode; set => textBoxTestCode = value; }
@@ -483,5 +509,6 @@ namespace QuizApp.GUI
         public DataGridView DataGridViewQuestions { get => dataGridViewQuestions; set => dataGridViewQuestions = value; }
         public Panel PanelCreateQuestion { get => panelCreateQuestion; set => panelCreateQuestion = value; }
         public TextBox TextBoxId { get => textBoxId; set => textBoxId = value; }
+        public TextBox TextBoxTestSetTime { get => textBoxTestSetTime; set => textBoxTestSetTime = value; }
     }
 }

@@ -41,5 +41,10 @@ namespace QuizApp.GUI
         {
             TeacherHomeBLL.closeTeacherHomeFrom(e);
         }
+
+        private void buttonManage_Click(object sender, EventArgs e)
+        {
+            TeacherHomeBLL.actionButtonClick(sender, new frmTeacherManage(userId));
+        }
     }
 }

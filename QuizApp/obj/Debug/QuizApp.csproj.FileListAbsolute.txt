@@ -14,3 +14,4 @@ C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmLogi
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmTeacherHome.resources
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmTeacherNew.resources
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmTeacherEdit.resources
+C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmTeacherManage.resources

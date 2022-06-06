@@ -24,12 +24,13 @@ namespace QuizApp.DAL
             return queryClass.loadGridTable(sql);
         }
 
-        public bool createTestSet(string testCode, string testName, string userId)
+        public bool createTestSet(string testCode, string testName, string userId, string testTime)
         {
-            SqlCommand insertCommand = new SqlCommand("INSERT INTO TESTSET VALUES(@testCode, @testName, @userId)");
+            SqlCommand insertCommand = new SqlCommand("INSERT INTO TESTSET VALUES(@testCode, @testName, @userId, CONVERT(int, @testTime))");
             insertCommand.Parameters.AddWithValue("@testCode", testCode);
             insertCommand.Parameters.AddWithValue("@testName", testName);
             insertCommand.Parameters.AddWithValue("@userId", userId);
+            insertCommand.Parameters.AddWithValue("@testTime", testTime);
 
             string successMessage = "Create Test Set Successfully.";
             string failMessage = "Create Test Set Fail. Test code already exsist.";

@@ -18,6 +18,10 @@ namespace QuizApp.GUI
         {
             InitializeComponent();
             loginBLL = new BLL.LoginBLL(this);
+
+            //Test code
+            this.textBoxUsername.Text = "vancleca";
+            this.textBoxPassword.Text = "Casca113s2@";
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

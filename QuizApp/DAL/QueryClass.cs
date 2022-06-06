@@ -39,16 +39,25 @@ namespace QuizApp.DAL
 
                 if (result >= 1)
                 {
-                    MessageBox.Show(successMessage, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (!string.IsNullOrEmpty(successMessage))
+                    {
+                        MessageBox.Show(successMessage, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                     queryResult = true;
                 }
-                else MessageBox.Show(failMessage, "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    if (!string.IsNullOrEmpty(failMessage))
+                    {
+                        MessageBox.Show(failMessage, "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                    
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                MessageBox.Show(failMessage, "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show("SQL Query Problem!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(failMessage, "SQL Query Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
