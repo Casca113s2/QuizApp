@@ -13,6 +13,7 @@ namespace QuizApp.BLL
     class TeacherHomeBLL
     {
         private Button currentButton;
+        string currentForm;
         private Random random;
         private int tempIndex;
         GUI.frmTeacherHome frmTeacherHome;
@@ -21,6 +22,7 @@ namespace QuizApp.BLL
         {
             random = new Random();
             this.frmTeacherHome = frmTeacherHome;
+            currentForm = "";
         }
 
         private Color SelectedThemeColor()
@@ -71,11 +73,13 @@ namespace QuizApp.BLL
 
         private void deletePanelControls()
         {
+            currentForm = "";
+
             foreach (Control c in frmTeacherHome.PanelMain.Controls)
                 c.Dispose();
         }
 
-        public void actionButtonClick(object sender, string currentForm, Form targetForm)
+        public void actionButtonClick(object sender, Form targetForm)
         {
             FormCollection fc = Application.OpenForms;
 
@@ -91,7 +95,7 @@ namespace QuizApp.BLL
                 }
             }
 
-            if(openForm && (targetForm.Name!= currentForm))
+            if(openForm && (targetForm.Name != currentForm))
             {
                 DialogResult dr = MessageBox.Show("Are you sure want to close the current form?", "Close form", MessageBoxButtons.YesNo);
 
@@ -109,11 +113,13 @@ namespace QuizApp.BLL
                 frmTeacherHome.LabelTitle.Text = targetForm.Text;
                 targetForm.Closed += (s, args) =>
                 {
+                    currentForm = "";
                     frmTeacherHome.LabelTitle.Text = "Home";
                     frmTeacherHome.PanelMain.Controls.Clear();
                     DisableButton();
                 };
 
+                currentForm = targetForm.Name;
                 targetForm.TopLevel = false;
                 targetForm.Dock = DockStyle.Fill;
                 frmTeacherHome.PanelMain.Controls.Add(targetForm);

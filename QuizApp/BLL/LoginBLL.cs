@@ -30,7 +30,7 @@ namespace QuizApp.BLL
         {
             if (loginDAL.login(frmLogin.TextBoxUsername.Text, EncryptMD5.MD5Hash(frmLogin.TextBoxPassword.Text)) >= 1)
             {
-                GUI.frmTeacherHome frmTeacherHome = new GUI.frmTeacherHome();
+                GUI.frmTeacherHome frmTeacherHome = new GUI.frmTeacherHome(frmLogin.TextBoxUsername.Text);
                 frmTeacherHome.Closed += (s, args) => frmLogin.Close();
                 frmLogin.Hide();
                 frmTeacherHome.Show();

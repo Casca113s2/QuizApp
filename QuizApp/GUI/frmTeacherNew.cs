@@ -12,9 +12,12 @@ namespace QuizApp.GUI
 {
     public partial class frmTeacherNew : Form
     {
-        public frmTeacherNew()
+        string userId;
+
+        public frmTeacherNew(string userId)
         {
             InitializeComponent();
+            this.userId = userId;
         }
     }
 }

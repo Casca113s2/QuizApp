@@ -13,20 +13,23 @@ namespace QuizApp.GUI
     public partial class frmTeacherHome : Form
     {
         BLL.TeacherHomeBLL TeacherHomeBLL;
-        public frmTeacherHome()
+        string userId;
+
+        public frmTeacherHome(string userID)
         {
             InitializeComponent();
             TeacherHomeBLL = new BLL.TeacherHomeBLL(this);
+            this.userId = userID;
         }
 
         private void buttonNew_Click(object sender, EventArgs e)
         {
-            TeacherHomeBLL.actionButtonClick(sender, "frmTeacherNew", new frmTeacherNew());
+            TeacherHomeBLL.actionButtonClick(sender, new frmTeacherNew(userId));
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            TeacherHomeBLL.actionButtonClick(sender, "frmTeacherEdit", new frmTeacherEdit());
+            TeacherHomeBLL.actionButtonClick(sender, new frmTeacherEdit(userId));
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
