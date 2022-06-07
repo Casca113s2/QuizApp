@@ -20,7 +20,7 @@ namespace QuizApp.GUI
             loginBLL = new BLL.LoginBLL(this);
 
             //Test code
-            this.textBoxUsername.Text = "vancleca";
+            this.textBoxUsername.Text = "vancleca1";
             this.textBoxPassword.Text = "Casca113s2@";
         }
 

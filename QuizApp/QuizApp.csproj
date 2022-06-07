@@ -61,20 +61,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\DoTestBLL.cs" />
     <Compile Include="BLL\EncryptMD5.cs" />
     <Compile Include="BLL\LoginBLL.cs" />
     <Compile Include="BLL\RegisterBLL.cs" />
+    <Compile Include="BLL\StudentHomeBLL.cs" />
     <Compile Include="BLL\TeacherEditBLL.cs" />
     <Compile Include="BLL\TeacherHomeBLL.cs" />
     <Compile Include="BLL\TeacherManageBLL.cs" />
     <Compile Include="BLL\TeacherNewBLL.cs" />
     <Compile Include="BLL\ThemeColor.cs" />
+    <Compile Include="DAL\DoTestDAL.cs" />
     <Compile Include="DAL\LoginDAL.cs" />
     <Compile Include="DAL\QueryClass.cs" />
     <Compile Include="DAL\RegisterDAL.cs" />
     <Compile Include="DAL\TeacherEditDAL.cs" />
     <Compile Include="DAL\TeacherManageDAL.cs" />
     <Compile Include="DAL\TeacherNewDAL.cs" />
+    <Compile Include="GUI\frmDoTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDoTest.Designer.cs">
+      <DependentUpon>frmDoTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +95,12 @@
     </Compile>
     <Compile Include="GUI\frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmStudentHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmStudentHome.Designer.cs">
+      <DependentUpon>frmStudentHome.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmTeacherEdit.cs">
       <SubType>Form</SubType>
@@ -113,11 +128,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmDoTest.resx">
+      <DependentUpon>frmDoTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmStudentHome.resx">
+      <DependentUpon>frmStudentHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTeacherEdit.resx">
       <DependentUpon>frmTeacherEdit.cs</DependentUpon>

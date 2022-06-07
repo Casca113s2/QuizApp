@@ -9,9 +9,11 @@ C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.csproj.Gene
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.csproj.CoreCompileInputs.cache
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.exe
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.pdb
-C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.csprojAssemblyReference.cache
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmLogin.resources
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmTeacherHome.resources
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmTeacherNew.resources
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmTeacherEdit.resources
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmTeacherManage.resources
+C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmStudentHome.resources
+C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmDoTest.resources
+C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.csprojAssemblyReference.cache

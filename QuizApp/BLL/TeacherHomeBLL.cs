@@ -88,6 +88,11 @@ namespace QuizApp.BLL
 
             foreach (Form frm in fc)
             {
+                if (frm.Name == currentForm && targetForm.Name == currentForm)
+                {
+                    return;
+                }
+
                 if (frm.Name == currentForm)
                 {
                     openForm = true;

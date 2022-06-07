@@ -28,12 +28,19 @@ namespace QuizApp.BLL
 
         public void login()
         {
-            if (loginDAL.login(frmLogin.TextBoxUsername.Text, EncryptMD5.MD5Hash(frmLogin.TextBoxPassword.Text)) >= 1)
+            if (loginDAL.login(frmLogin.TextBoxUsername.Text, EncryptMD5.MD5Hash(frmLogin.TextBoxPassword.Text), "Teacher") >= 1)
             {
                 GUI.frmTeacherHome frmTeacherHome = new GUI.frmTeacherHome(frmLogin.TextBoxUsername.Text);
                 frmTeacherHome.Closed += (s, args) => frmLogin.Close();
                 frmLogin.Hide();
                 frmTeacherHome.Show();
+            }
+            else if(loginDAL.login(frmLogin.TextBoxUsername.Text, EncryptMD5.MD5Hash(frmLogin.TextBoxPassword.Text), "Student") >= 1)
+            {
+                GUI.frmStudentHome frmStudentHome = new GUI.frmStudentHome(frmLogin.TextBoxUsername.Text);
+                frmStudentHome.Closed += (s, args) => frmLogin.Close();
+                frmLogin.Hide();
+                frmStudentHome.Show();
             }
             else MessageBox.Show("Wrong username or password.", "Login Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
