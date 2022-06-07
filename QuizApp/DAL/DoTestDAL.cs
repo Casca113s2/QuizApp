@@ -39,5 +39,16 @@ namespace QuizApp.DAL
 
             return queryClass.selectValueQuery(selectSqlCommand, "TIME", "", "");
         }
+
+        public void submit(string userId, string testCode, string grade)
+        {
+            SqlCommand insertCommand = new SqlCommand("INSERT INTO TESTRESULT VALUES(@testCode, @userId, CONVERT(datetime, @submitTime, 103), CONVERT(float, @grade))");
+            insertCommand.Parameters.AddWithValue("@testCode", testCode);
+            insertCommand.Parameters.AddWithValue("@userId", userId);
+            insertCommand.Parameters.AddWithValue("@submitTime", DateTime.Now);
+            insertCommand.Parameters.AddWithValue("@grade", grade);
+
+            queryClass.executeNonQuery(insertCommand, "", "");
+        }
     }
 }

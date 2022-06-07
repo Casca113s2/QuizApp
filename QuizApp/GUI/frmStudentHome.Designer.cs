@@ -117,14 +117,14 @@ namespace QuizApp.GUI
             this.buttonLearn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLearn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLearn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonLearn.Image = global::QuizApp.Properties.Resources.pi;
+            this.buttonLearn.Image = global::QuizApp.Properties.Resources.manual;
             this.buttonLearn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonLearn.Location = new System.Drawing.Point(0, 140);
             this.buttonLearn.Name = "buttonLearn";
             this.buttonLearn.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.buttonLearn.Size = new System.Drawing.Size(220, 60);
             this.buttonLearn.TabIndex = 5;
-            this.buttonLearn.Text = "    Learn";
+            this.buttonLearn.Text = "    View Grade";
             this.buttonLearn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonLearn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonLearn.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@ namespace QuizApp.GUI
             this.buttonDoTest.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.buttonDoTest.Size = new System.Drawing.Size(220, 60);
             this.buttonDoTest.TabIndex = 4;
-            this.buttonDoTest.Text = "     Do Test";
+            this.buttonDoTest.Text = "       Do Test";
             this.buttonDoTest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDoTest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDoTest.UseVisualStyleBackColor = true;

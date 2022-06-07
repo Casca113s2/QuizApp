@@ -165,6 +165,7 @@ namespace QuizApp.BLL
 
         private void submit()
         {
+            string testCode = frmDoTest.TextBoxTestCode.Text;
             int rightAnswerNum = 0;
 
             int i = 0;
@@ -182,6 +183,18 @@ namespace QuizApp.BLL
             string message = "You answer right " + rightAnswerNum + " on " + Questions.Rows.Count + " questions.";
 
             MessageBox.Show(message, "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            float grade = 0;
+
+            if(Questions.Rows.Count > 0)
+            {
+                grade = (rightAnswerNum * 10) / Questions.Rows.Count;
+            }
+
+            doTestDAL.submit(frmDoTest.UserId, testCode, grade.ToString());
+
+            Questions = new DataTable();
+            userAnswer = new Dictionary<string, string>();
         }
 
         public void submitButtonClick()
@@ -330,6 +343,11 @@ namespace QuizApp.BLL
         public void closeDoTestEditForm()
         {
             DialogResult result = MessageBox.Show("Are you sure you want to close this form?", "Close Edit Question Set Form", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if(frmDoTest.PanelCreateQuestion.Visible)
+            {
+                submit();
+            }
 
             if (result == DialogResult.Yes)
                 frmDoTest.Close();
