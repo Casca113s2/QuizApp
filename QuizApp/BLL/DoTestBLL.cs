@@ -139,7 +139,10 @@ namespace QuizApp.BLL
 
             foreach (DataRow dr in Questions.Rows)
             {
-                userAnswer.Add(dr["ID"].ToString(), "");
+                if(!userAnswer.ContainsKey(dr["ID"].ToString()))
+                {
+                    userAnswer.Add(dr["ID"].ToString(), "");
+                }
             }
         }
 
