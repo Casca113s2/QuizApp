@@ -68,5 +68,10 @@ namespace QuizApp.GUI
         {
             teacherNewBLL.timeTextBoxKeyPress(e);
         }
+
+        private void textBoxTestCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            teacherNewBLL.codeTextBoxKeyPress(e);
+        }
     }
 }

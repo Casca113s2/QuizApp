@@ -46,6 +46,16 @@ namespace QuizApp.BLL
             }
         }
 
+        public void codeTextBoxKeyPress(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar)
+                && !char.IsDigit(e.KeyChar)
+                && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         public void createTestSet()
         {
             if(!checkEmptyFieldTestSet())

@@ -154,6 +154,7 @@ namespace QuizApp.GUI
             this.textBoxTestCode.Name = "textBoxTestCode";
             this.textBoxTestCode.Size = new System.Drawing.Size(194, 20);
             this.textBoxTestCode.TabIndex = 22;
+            this.textBoxTestCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTestCode_KeyPress);
             // 
             // labelCreateTest
             // 
