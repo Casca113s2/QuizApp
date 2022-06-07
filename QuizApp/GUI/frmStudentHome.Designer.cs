@@ -38,7 +38,7 @@ namespace QuizApp.GUI
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.buttonLearn = new System.Windows.Forms.Button();
+            this.buttonViewGrade = new System.Windows.Forms.Button();
             this.buttonDoTest = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
@@ -100,7 +100,7 @@ namespace QuizApp.GUI
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.buttonLearn);
+            this.panelMenu.Controls.Add(this.buttonViewGrade);
             this.panelMenu.Controls.Add(this.buttonDoTest);
             this.panelMenu.Controls.Add(this.buttonExit);
             this.panelMenu.Controls.Add(this.panelLogo);
@@ -110,25 +110,25 @@ namespace QuizApp.GUI
             this.panelMenu.Size = new System.Drawing.Size(220, 761);
             this.panelMenu.TabIndex = 8;
             // 
-            // buttonLearn
+            // buttonViewGrade
             // 
-            this.buttonLearn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonLearn.FlatAppearance.BorderSize = 0;
-            this.buttonLearn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLearn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLearn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonLearn.Image = global::QuizApp.Properties.Resources.manual;
-            this.buttonLearn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonLearn.Location = new System.Drawing.Point(0, 140);
-            this.buttonLearn.Name = "buttonLearn";
-            this.buttonLearn.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.buttonLearn.Size = new System.Drawing.Size(220, 60);
-            this.buttonLearn.TabIndex = 5;
-            this.buttonLearn.Text = "    View Grade";
-            this.buttonLearn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonLearn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonLearn.UseVisualStyleBackColor = true;
-            this.buttonLearn.Click += new System.EventHandler(this.buttonLearn_Click);
+            this.buttonViewGrade.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonViewGrade.FlatAppearance.BorderSize = 0;
+            this.buttonViewGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonViewGrade.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonViewGrade.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonViewGrade.Image = global::QuizApp.Properties.Resources.manual;
+            this.buttonViewGrade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonViewGrade.Location = new System.Drawing.Point(0, 140);
+            this.buttonViewGrade.Name = "buttonViewGrade";
+            this.buttonViewGrade.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.buttonViewGrade.Size = new System.Drawing.Size(220, 60);
+            this.buttonViewGrade.TabIndex = 5;
+            this.buttonViewGrade.Text = "    View Grade";
+            this.buttonViewGrade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonViewGrade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonViewGrade.UseVisualStyleBackColor = true;
+            this.buttonViewGrade.Click += new System.EventHandler(this.buttonViewGrade_Click);
             // 
             // buttonDoTest
             // 
@@ -201,7 +201,7 @@ namespace QuizApp.GUI
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button buttonLearn;
+        private System.Windows.Forms.Button buttonViewGrade;
         private System.Windows.Forms.Button buttonDoTest;
         private System.Windows.Forms.Button buttonExit;
 
@@ -211,7 +211,7 @@ namespace QuizApp.GUI
         public Label LabelTitle { get => labelTitle; set => labelTitle = value; }
         public Panel PanelMain { get => panelMain; set => panelMain = value; }
         public Panel PanelMenu { get => panelMenu; set => panelMenu = value; }
-        public Button ButtonLearn { get => buttonLearn; set => buttonLearn = value; }
+        public Button ButtonViewGrade { get => buttonViewGrade; set => buttonViewGrade = value; }
         public Button ButtonDoTest { get => buttonDoTest; set => buttonDoTest = value; }
         public Button ButtonExit { get => buttonExit; set => buttonExit = value; }
     }

@@ -29,11 +29,6 @@ namespace QuizApp.GUI
             studentHomeBLL.actionButtonClick(sender, new frmDoTest(UserId));
         }
 
-        private void buttonLearn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -42,6 +37,11 @@ namespace QuizApp.GUI
         private void frmStudentHome_FormClosing(object sender, FormClosingEventArgs e)
         {
             studentHomeBLL.closeStudentHomeFrom(e);
+        }
+
+        private void buttonViewGrade_Click(object sender, EventArgs e)
+        {
+            studentHomeBLL.actionButtonClick(sender, new frmStudentViewGrade(UserId));
         }
     }
 }

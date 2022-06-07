@@ -304,7 +304,7 @@ namespace QuizApp.BLL
                     loadQuestionData();
                     loadQuestion();
 
-                    if((Questions.Rows.Count - 1) > 1)
+                    if(Questions.Rows.Count > 1)
                     {
                         frmDoTest.ButtonNext.Enabled = true;
                     }

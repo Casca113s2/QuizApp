@@ -17,3 +17,4 @@ C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmTeac
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmStudentHome.resources
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmDoTest.resources
 C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.csprojAssemblyReference.cache
+C:\Users\Casca\Desktop\.NETProject\QuizApp\QuizApp\obj\Debug\QuizApp.GUI.frmStudentViewGrade.resources

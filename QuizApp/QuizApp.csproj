@@ -66,6 +66,7 @@
     <Compile Include="BLL\LoginBLL.cs" />
     <Compile Include="BLL\RegisterBLL.cs" />
     <Compile Include="BLL\StudentHomeBLL.cs" />
+    <Compile Include="BLL\StudentViewGradeBLL.cs" />
     <Compile Include="BLL\TeacherEditBLL.cs" />
     <Compile Include="BLL\TeacherHomeBLL.cs" />
     <Compile Include="BLL\TeacherManageBLL.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="DAL\LoginDAL.cs" />
     <Compile Include="DAL\QueryClass.cs" />
     <Compile Include="DAL\RegisterDAL.cs" />
+    <Compile Include="DAL\StudentViewGradeDAL.cs" />
     <Compile Include="DAL\TeacherEditDAL.cs" />
     <Compile Include="DAL\TeacherManageDAL.cs" />
     <Compile Include="DAL\TeacherNewDAL.cs" />
@@ -101,6 +103,12 @@
     </Compile>
     <Compile Include="GUI\frmStudentHome.Designer.cs">
       <DependentUpon>frmStudentHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmStudentViewGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmStudentViewGrade.Designer.cs">
+      <DependentUpon>frmStudentViewGrade.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmTeacherEdit.cs">
       <SubType>Form</SubType>
@@ -139,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmStudentHome.resx">
       <DependentUpon>frmStudentHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmStudentViewGrade.resx">
+      <DependentUpon>frmStudentViewGrade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTeacherEdit.resx">
       <DependentUpon>frmTeacherEdit.cs</DependentUpon>
